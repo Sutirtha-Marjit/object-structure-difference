@@ -1,7 +1,7 @@
 import React from 'react';
 import './TextWritter.css';
 
-const TextWrite = ({ heading, onChange }) => {
+const TextWrite = ({ heading, onChange, editOff }) => {
 
     const [beautifiedContent, setBeautifiedContent] = React.useState('{}');
     const [errMSG, setErrMSG] = React.useState(null);
@@ -25,12 +25,13 @@ const TextWrite = ({ heading, onChange }) => {
 
     return <div className="text-writer-zone">
         <h5>{heading}</h5>
-        <textarea rows="12" onChange={jsonEditHandler} className="json-writter-textarea"></textarea>
-        <div className="beautified">
+        {!editOff && <textarea rows="12" onChange={jsonEditHandler} className="json-writter-textarea"></textarea>}
+        {editOff && <div className="beautified">
             <pre>
                 {beautifiedContent}
             </pre>
-        </div>
+        </div>}
+
         <br />
         {errMSG && <div className="alert alert-danger"><small>{errMSG}</small></div>}
     </div>
