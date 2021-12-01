@@ -1,0 +1,12 @@
+html,body{ font-size:12px; }
+:root{
+   --json-diff-border-radius: 8px;
+   --json-diff-success-grad-one: #48d0db;
+   --json-diff-success-grad-two: #28f1be;
+   --json-diff-dark-grad-one: #16246b;
+   --json-diff-dark-grad-two: #203f9e;
+   --json-diff-bright-grad-one: #ffa858;
+   --json-diff-bright-grad-two: #ff4d80;   
+   --json-diff-white-grad-one: rgb(194, 193, 193);
+   --json-diff-white-grad-two: #ffffff;
+}

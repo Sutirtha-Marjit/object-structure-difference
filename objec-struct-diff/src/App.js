@@ -1,14 +1,10 @@
-import CompareBase from "./components/CompareBase";
+
+import './App.css';
+import AppRouter from './components/routes/app-router';
 
 function App() {
-  return (
+  return <AppRouter />
 
-
-    <div>
-      <CompareBase />
-    </div>
-
-  );
 }
 
 export default App;

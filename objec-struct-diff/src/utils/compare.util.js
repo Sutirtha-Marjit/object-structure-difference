@@ -5,6 +5,10 @@ const CompareUtil = {
         TO_COMPARE: 'tocompare'
     },
 
+    beautifiedJSON(object) {
+        return JSON.stringify(object, undefined, 4);
+    },
+
     compare(compObject) {
         const missing = {};
         const extra = {};
